@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#" class="logo">Faith Cherotich<span>.</span></a>
+        <button
+          class="menu-toggle"
+          id="mobile-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="greeting">Hi my name is Faith Cherotich</p>
+          <h1 class="hero-title">Front-End Developer.</h1>
+          <p class="hero-description">
+            I create responsive and user-friendly web applications using HTML,
+            CSS,and Javascript
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn primary-btn">View My Work</a>
+            <a href="#contact" class="btn secondary-btn">Contact Me</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-section">
+        <h2 class="section-title">Featured Projects<span></span></h2>
+        <!-- Project Cards 1 -->
+        <div class="project-cards">
+          <div class="project-card">
+            <h3 class="project-title">Responsive Analytics Dashboard</h3>
+            <p class="project-description">
+              A modern accessible dashboard built with pure HTML5, CSS
+              Flexbox/Grid, and Vanilla JavaScript. It features a fully custom
+              dark/light theme toggle with persistent user preferences.
+            </p>
+
+            <a
+              href="http://localhost:5173"
+              class="btn primary-btn"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
+          <div class="project-card">
+            <h3 class="project-title">Dynamic Data Hub</h3>
+            <p class="project-description">
+              An API-driven web application built with React.js, showcasing
+              dynamic data fetching and state management.Features asychronus
+              state updates,live search, and dynamic data visualization.
+            </p>
+
+            <a
+              href="http://localhost:5174"
+              class="btn primary-btn"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
+          <div class="project-card">
+            <h3 class="project-title">Multi-Step UI Flow and Filter Engine</h3>
+            <p class="project-description">
+              A complex client-side application featuring a multi-step form
+              wizard, state validation, and a multi-criteria search filter
+              componment for seamless user interaction
+            </p>
+
+            <a
+              href="http://localhost:5175"
+              class="btn primary-btn"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact-section">
+        <h2 class="section-title">Get in Touch<span></span></h2>
+        <p class="contact-description">
+          I'm currently looking for new opportunities and project
+          collaborations. Whether you have a question or want to work together,
+          my inbox is always open. I'll get back to you as soon as possible.
+        </p>
+        <a href="mailto:faithcherotich921@gmail.com" class="btn primary-btn"
+          >Send Email</a
+        >
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Faith Cherotich. Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
