@@ -25,4 +25,4 @@ Browse and explore movies with search and details.
 - JavaScript
 
 ## Live Portfolio
-https://maya-pixel412.github.io
+https://maya-pixel412.github.io/Portfolio-projects/
