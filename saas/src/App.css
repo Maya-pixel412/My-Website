@@ -150,6 +150,7 @@ th {
   background: rgba(239, 68, 68, 0.2);
   color: var(--accent-red);
 }
+<<<<<<< HEAD
 header h1,
 .header h1,
 .dashboard-header h1 {
@@ -160,4 +161,75 @@ header h1,
   display: block !important;
   white-space: normal !important;
   transform: none !important;
+=======
+/* Mobile fix - for phones */
+@media (max-width: 768px) {
+  /* Hide the left sidebar on phone */
+  .sidebar, aside, nav.sidebar {
+    display: none !important;
+  }
+
+  /* Make main content full width */
+  .main-content, main, .content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding: 16px !important;
+  }
+
+  /* Fix title and search */
+  .header, header, .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .header input[type="text"], .search-bar, input[placeholder*="Search"] {
+    width: 100% !important;
+  }
+
+  /* Make cards stack nicely - 1 per row */
+  .stats-grid, .cards, .card-container, .dashboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .stat-card, .card {
+    width: 100% !important;
+    margin-bottom: 12px;
+  }
+}
+/* Mobile fix - for phones */
+@media (max-width: 768px) {
+  /* Hide the left sidebar on phone */
+  .sidebar, aside, nav.sidebar {
+    display: none !important;
+  }
+
+  /* Make main content full width */
+  .main-content, main, .content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding: 16px !important;
+  }
+
+  /* Fix title and search */
+  .header, header, .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .header input[type="text"], .search-bar, input[placeholder*="Search"] {
+    width: 100% !important;
+  }
+
+  /* Make cards stack nicely - 1 per row */
+  .stats-grid, .cards, .card-container, .dashboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .stat-card, .card {
+    width: 100% !important;
+    margin-bottom: 12px;
+  }
+>>>>>>> 1fea8c52cf7cf3ce568fb580311fe4c436231f51
 }
