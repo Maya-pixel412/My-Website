@@ -150,3 +150,14 @@ th {
   background: rgba(239, 68, 68, 0.2);
   color: var(--accent-red);
 }
+header h1,
+.header h1,
+.dashboard-header h1 {
+  line-height: 1.2 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: static !important;
+  display: block !important;
+  white-space: normal !important;
+  transform: none !important;
+}

@@ -19,7 +19,7 @@ export default function App() {
         <h2>Analytics Hub</h2>
         <nav>
           <button
-            className={activeTab === "overview" ? "active" : ""}
+            className={`button ${activeTab === "overview" ? "active" : ""}`}
             onClick={() => setActiveTab("overview")}
           >
             Overview
@@ -35,7 +35,16 @@ export default function App() {
 
       <main className="main-content">
         <header className="header">
-          <h1>SaaS Analytics Dashboard</h1>
+          <h1
+            style={{
+              lineHeight: "1.2",
+              margin: 0,
+              fontSize: "24px",
+              whiteSpace: "nowrap",
+            }}
+          >
+            SaaS Analytics Dashboard
+          </h1>
           <input
             type="text"
             placeholder="Search transactions..."
@@ -51,51 +60,55 @@ export default function App() {
           />
         </header>
 
-        <section className="metrics-grid">
-          {Object.entries(METRICS_DATA).map(([key, item]) => (
-            <div key={key} className="metric-card">
-              <h4>{item.label}</h4>
-              <div className="value">{item.value}</div>
-              <div
-                className={`change ${item.positive ? "positive" : "negative"}`}
-              >
-                {item.change} vs last month
+        {activeTab === "overview" && (
+          <section className="metrics-grid">
+            {Object.entries(METRICS_DATA).map(([key, item]) => (
+              <div key={key} className="metric-card">
+                <h4>{item.label}</h4>
+                <div className="value">{item.value}</div>
+                <div
+                  className={`change ${item.positive ? "positive" : "negative"}`}
+                >
+                  {item.change} vs last month
+                </div>
               </div>
-            </div>
-          ))}
-        </section>
+            ))}
+          </section>
+        )}
 
-        <section className="table-container">
-          <h3>Recent Transactions</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Customer</th>
-                <th>Plan</th>
-                <th>Amount</th>
-                <th>Status</th>
-                <th>Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredTransactions.map((tx) => (
-                <tr key={tx.id}>
-                  <td>{tx.id}</td>
-                  <td>
-                    <strong>{tx.user}</strong>
-                  </td>
-                  <td>{tx.plan}</td>
-                  <td>{tx.amount}</td>
-                  <td>
-                    <span className={`badge ${tx.status}`}>{tx.status}</span>
-                  </td>
-                  <td>{tx.date}</td>
+        {activeTab === "transactions" && (
+          <section className="table-container">
+            <h3>Recent Transactions</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Customer</th>
+                  <th>Plan</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Date</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </section>
+              </thead>
+              <tbody>
+                {filteredTransactions.map((tx) => (
+                  <tr key={tx.id}>
+                    <td>{tx.id}</td>
+                    <td>
+                      <strong>{tx.user}</strong>
+                    </td>
+                    <td>{tx.plan}</td>
+                    <td>{tx.amount}</td>
+                    <td>
+                      <span className={`badge ${tx.status}`}>{tx.status}</span>
+                    </td>
+                    <td>{tx.date}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
+        )}
       </main>
     </div>
   );
