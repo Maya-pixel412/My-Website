@@ -119,7 +119,6 @@
       box.innerHTML = '';
       
       repos.filter(repo => !repo.fork).forEach(repo => {
-        // Ensure you use backticks (`) for template literals, not single quotes (')
         box.innerHTML += `
           <div class="project-card">
             <h3>${repo.name}</h3>
