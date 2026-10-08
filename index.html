@@ -112,22 +112,6 @@
     <script src="js/script.js"></script>
       <script>
   fetch('https://api.github.com/users/Maya-pixel412/repos?sort=updated&per_page=100')
-    .then(response => response.json())
-    .then(repos => {
-      const box = document.querySelector('.project-cards');
-      if (!box) return;
-      box.innerHTML = '';
-      
-      repos.filter(repo => !repo.fork).forEach(repo => {
-        box.innerHTML += `
-          <div class="project-card">
-            <h3>${repo.name}</h3>
-            <p>${repo.description || 'Click to view this project.'}</p>
-            <a href="${repo.html_url}" target="_blank">View Project</a>
-          </div>
-        `;
-      });
-    });
 </script>      
   </body>
 </html>
