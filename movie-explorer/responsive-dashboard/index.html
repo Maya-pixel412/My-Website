@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytic Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <h2 class="logo">Dash<span>board</span></h2>
+        <nav class="sidebar-nav">
+          <a href="#" class="nav-link active" data-target="overview-sec"
+            >Overview</a
+          >
+          <a href="#" class="nav-link" data-target="analytics-sec">Analytics</a>
+          <a href="#" class="nav-link" data-target="reports-sec">Reports</a>
+          <a href="#" class="nav-link" data-target="settings-sec">Settings</a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="top-bar">
+          <h1 id="page-title">Overview</h1>
+          <button id="theme-toggle" class="btn-theme" aria-label="Toggle Theme">
+            Switch Theme
+          </button>
+        </header>
+
+        <section id="overview-sec" class="dashboard-section active">
+          <section class="stats-grid">
+            <div class="card stat-card">
+              <h3>Total Users</h3>
+              <p class="stat-number">12,450</p>
+              <span class="stat-change positive">+15% this week</span>
+            </div>
+            <div class="card stat-card">
+              <h3>Revenue</h3>
+              <p class="stat-number">$34,200</p>
+              <span class="stat-change positive">+8% this week</span>
+            </div>
+            <div class="card stat-card">
+              <h3>Bounce Rate</h3>
+              <p class="stat-number">42.4%</p>
+              <span class="stat-change negative">-3% this week</span>
+            </div>
+            <div class="card stat-card">
+              <h3>Active Sessions</h3>
+              <p class="stat-number">1, 120</p>
+              <span class="stat-change positive">+22% live</span>
+            </div>
+          </section>
+
+          <section class="content-grid">
+            <div class="card chart-panel">
+              <h3>Traffic Overview</h3>
+              <div class="chart-placeholder">
+                <div class="bar" style="--height: 40%"></div>
+                <div class="bar" style="--height: 70%"></div>
+                <div class="bar" style="--height: 30%"></div>
+                <div class="bar" style="--height: 85%"></div>
+                <div class="bar" style="--height: 60%"></div>
+              </div>
+            </div>
+
+            <div class="activity-panel card">
+              <h3>Recent Activity</h3>
+              <ul class="activity-list">
+                <li>User <strong>#4829</strong>upgraded plan</li>
+                <li>New user registration: <strong>Jackson Miller</strong></li>
+                <li>System backup completed successfully</li>
+                <li>Payout processed ($1,200)</li>
+              </ul>
+            </div>
+          </section>
+        </section>
+
+        <section id="analytics-sec" class="dashboard-section hidden">
+          <div class="card">
+            <h3>Analytics Deep Dive</h3>
+            <p>
+              Detailed perfomance analytics and conversation funnels will render
+              here.
+            </p>
+          </div>
+        </section>
+
+        <section id="reports-sec" class="dashboard-section hidden">
+          <div class="card">
+            <h3>Generated Reports</h3>
+            <p>Export CSV/PDF reports or view historical logs.</p>
+          </div>
+        </section>
+
+        <section id="settings-sec" class="dashboard-section hidden">
+          <div class="card">
+            <h3>Account Settings</h3>
+            <p>Manage user preferences,password security,and API keys.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
